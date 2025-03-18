@@ -17,7 +17,7 @@ const services = {
     title: 'Copywriting',
     headline: 'Compelling Copywriting That Converts',
     description: 'Our expert copywriters craft compelling content that engages your audience and drives conversions through strategic storytelling and brand messaging.',
-    overview: 'At Factor., we believe that powerful copy is the backbone of effective digital marketing. Our copywriting services are designed to capture your brand's voice and connect with your target audience in meaningful ways. From website copy to email campaigns, blog posts to social media content, we create messaging that resonates and drives action.',
+    overview: 'At Factor., we believe that powerful copy is the backbone of effective digital marketing. Our copywriting services are designed to capture your brand\'s voice and connect with your target audience in meaningful ways. From website copy to email campaigns, blog posts to social media content, we create messaging that resonates and drives action.',
     benefits: [
       'Increased engagement and conversion rates',
       'Consistent brand voice across all platforms',
@@ -39,7 +39,7 @@ const services = {
       },
       { 
         question: 'How do you ensure the copy matches our brand voice?', 
-        answer: 'Our process includes an in-depth discovery phase where we learn your brand's unique voice and tone. We create detailed brand guidelines that inform all content creation.' 
+        answer: 'Our process includes an in-depth discovery phase where we learn your brand\'s unique voice and tone. We create detailed brand guidelines that inform all content creation.' 
       },
       { 
         question: 'How is SEO incorporated into the copywriting?', 
@@ -77,7 +77,7 @@ const services = {
         answer: 'We track key metrics including impressions, clicks, conversions, cost per acquisition, and return on ad spend. We provide regular reports with actionable insights.' 
       },
       { 
-        question: 'What's your approach to budget management?', 
+        question: 'What\'s your approach to budget management?', 
         answer: 'We develop strategies that align with your budget and goals, continually optimizing to ensure efficient spending and maximum ROI.' 
       }
     ]
@@ -126,7 +126,7 @@ const services = {
     benefits: [
       'Consistent brand presence across social platforms',
       'Increased engagement and community growth',
-      'Content tailored to each platform's unique audience',
+      'Content tailored to each platform\'s unique audience',
       'Timely response to comments and messages',
       'Regular reporting on key performance metrics'
     ],
