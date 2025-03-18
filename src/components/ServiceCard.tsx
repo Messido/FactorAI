@@ -1,16 +1,18 @@
 
 import React from 'react';
 import { LucideIcon } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface ServiceCardProps {
   icon: LucideIcon;
   title: string;
   description: string;
+  slug: string;
 }
 
-const ServiceCard: React.FC<ServiceCardProps> = ({ icon: Icon, title, description }) => {
+const ServiceCard: React.FC<ServiceCardProps> = ({ icon: Icon, title, description, slug }) => {
   return (
-    <div className="service-card bg-factor-black-light border border-gray-800 group">
+    <div className="service-card bg-factor-black-light border border-gray-800 group hover:border-factor-red transition-all duration-300">
       <div className="w-12 h-12 rounded-lg bg-factor-red flex items-center justify-center mb-5 transform transition-transform group-hover:scale-110">
         <Icon size={24} className="text-white" />
       </div>
@@ -19,9 +21,9 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon: Icon, title, descriptio
       
       <p className="text-gray-400 mb-5">{description}</p>
       
-      <a 
-        href="#contact" 
-        className="inline-flex items-center text-factor-red hover:text-factor-red-light transition-colors font-medium"
+      <Link 
+        to={`/services/${slug}`}
+        className="inline-flex items-center text-factor-red hover:text-factor-red-light transition-colors font-medium group-hover:translate-x-1 transition-transform"
       >
         Learn more
         <svg 
@@ -30,7 +32,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon: Icon, title, descriptio
           viewBox="0 0 24 24" 
           fill="none" 
           xmlns="http://www.w3.org/2000/svg"
-          className="ml-1"
+          className="ml-1 group-hover:ml-2 transition-all"
         >
           <path 
             d="M5 12H19M19 12L12 5M19 12L12 19" 
@@ -40,7 +42,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon: Icon, title, descriptio
             strokeLinejoin="round"
           />
         </svg>
-      </a>
+      </Link>
     </div>
   );
 };

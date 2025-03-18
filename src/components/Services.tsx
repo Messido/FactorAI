@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { PenLine, Megaphone, BarChart2, Users, Video, Computer } from 'lucide-react';
 import ServiceCard from './ServiceCard';
@@ -10,32 +9,38 @@ const Services: React.FC = () => {
     {
       icon: PenLine,
       title: 'Copywriting',
-      description: 'Compelling content that drives engagement and conversions through strategic storytelling and brand messaging.'
+      description: 'Compelling content that drives engagement and conversions through strategic storytelling and brand messaging.',
+      slug: 'copywriting'
     },
     {
       icon: Megaphone,
       title: 'Digital Ads',
-      description: 'Data-driven advertising campaigns that target the right audience across search, social, and display platforms.'
+      description: 'Data-driven advertising campaigns that target the right audience across search, social, and display platforms.',
+      slug: 'digital-ads'
     },
     {
       icon: BarChart2,
       title: 'SEO',
-      description: 'Technical optimization and content strategies that improve visibility and drive organic traffic to your website.'
+      description: 'Technical optimization and content strategies that improve visibility and drive organic traffic to your website.',
+      slug: 'seo'
     },
     {
       icon: Users,
       title: 'Social Media Management',
-      description: 'Strategic content creation and community management that builds brand presence and engagement.'
+      description: 'Strategic content creation and community management that builds brand presence and engagement.',
+      slug: 'social-media'
     },
     {
       icon: Video,
       title: 'Video Editing',
-      description: 'Professional video production and editing services that tell your brand story through compelling visual content.'
+      description: 'Professional video production and editing services that tell your brand story through compelling visual content.',
+      slug: 'video-editing'
     },
     {
       icon: Computer,
       title: 'Website Development',
-      description: 'Custom web solutions built with cutting-edge technology to deliver exceptional user experiences and results.'
+      description: 'Custom web solutions built with cutting-edge technology to deliver exceptional user experiences and results.',
+      slug: 'web-development'
     }
   ];
 
@@ -65,6 +70,7 @@ const Services: React.FC = () => {
                 icon={service.icon}
                 title={service.title}
                 description={service.description}
+                slug={service.slug}
               />
             </ScrollReveal>
           ))}
