@@ -38,13 +38,13 @@ const Hero: React.FC = () => {
         ref={backgroundRef}
         className="absolute inset-0 transition-transform duration-200 ease-out"
       >
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-[#ff1a3e]/10 blur-3xl"></div>
-        <div className="absolute bottom-1/3 right-1/4 w-96 h-96 rounded-full bg-[#ff1a3e]/5 blur-3xl"></div>
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-[#e30613]/10 blur-3xl"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-96 h-96 rounded-full bg-[#e30613]/5 blur-3xl"></div>
       </div>
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col items-center text-center max-w-5xl mx-auto">
-          <div className="bg-[#ff1a3e]/20 backdrop-blur-sm px-4 py-1.5 rounded-full mb-8 animate-fade-in">
+          <div className="bg-[#e30613]/20 backdrop-blur-sm px-4 py-1.5 rounded-full mb-8 animate-fade-in">
             <span className="text-sm font-medium text-white">Full-Service Digital Agency</span>
           </div>
           
@@ -52,7 +52,7 @@ const Hero: React.FC = () => {
             Factor
             <span 
               ref={dotRef} 
-              className="text-[#ff1a3e] inline-block transition-transform duration-300 ease-in-out"
+              className="text-[#e30613] inline-block animate-pulse-dynamic"
               style={{transformOrigin: 'center'}}
             >.</span>
           </div>

@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -166,6 +165,28 @@ export default {
 						transform: 'scale(1)',
 						opacity: '1'
 					}
+				},
+				'pulse-dynamic': {
+					'0%': {
+						transform: 'scale(1)',
+						filter: 'blur(0px)'
+					},
+					'25%': {
+						transform: 'scale(1.5) translate(3px, -2px)',
+						filter: 'blur(0.5px)'
+					},
+					'50%': {
+						transform: 'scale(1.2) translate(-2px, 3px)',
+						filter: 'blur(0px)'
+					},
+					'75%': {
+						transform: 'scale(1.4) translate(-1px, -3px)',
+						filter: 'blur(0.5px)'
+					},
+					'100%': {
+						transform: 'scale(1)',
+						filter: 'blur(0px)'
+					}
 				}
 			},
 			animation: {
@@ -177,7 +198,8 @@ export default {
 				'slide-in-left': 'slide-in-left 0.6s ease-out forwards',
 				'scale-in': 'scale-in 0.6s ease-out forwards',
 				'blur-in': 'blur-in 0.6s ease-out forwards',
-				'pulse-dot': 'pulse-dot 2.5s infinite ease-in-out'
+				'pulse-dot': 'pulse-dot 2.5s infinite ease-in-out',
+				'pulse-dynamic': 'pulse-dynamic 3s infinite ease-in-out'
 			},
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
