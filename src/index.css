@@ -16,7 +16,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 10%;
 
-    --primary: 355 100% 45%;
+    --primary: 355 100% 47%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 0 0% 9%;
@@ -25,7 +25,7 @@
     --muted: 0 0% 96%;
     --muted-foreground: 0 0% 45%;
 
-    --accent: 355 100% 45%;
+    --accent: 355 100% 47%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -33,7 +33,7 @@
 
     --border: 0 0% 90%;
     --input: 0 0% 90%;
-    --ring: 355 100% 45%;
+    --ring: 355 100% 47%;
 
     --radius: 0.5rem;
   }
@@ -48,7 +48,7 @@
     --popover: 0 0% 7%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 355 100% 45%;
+    --primary: 355 100% 47%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 0 0% 9%;
@@ -57,7 +57,7 @@
     --muted: 0 0% 15%;
     --muted-foreground: 0 0% 65%;
 
-    --accent: 355 100% 45%;
+    --accent: 355 100% 47%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
@@ -65,7 +65,7 @@
 
     --border: 0 0% 20%;
     --input: 0 0% 20%;
-    --ring: 355 100% 45%;
+    --ring: 355 100% 47%;
   }
 }
 
@@ -119,6 +119,26 @@
 
   .btn-outline {
     @apply border border-[#ff1a3e] text-[#ff1a3e] hover:bg-[#ff1a3e] hover:text-white rounded-md px-5 py-2.5 font-medium transition-colors;
+  }
+  
+  .animated-dot {
+    @apply inline-block text-[#ff1a3e] relative;
+    animation: pulse-dot 2.5s infinite ease-in-out;
+  }
+}
+
+@keyframes pulse-dot {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
 }
 

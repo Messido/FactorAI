@@ -152,6 +152,20 @@ export default {
 						filter: 'blur(0)',
 						opacity: '1'
 					}
+				},
+				'pulse-dot': {
+					'0%': {
+						transform: 'scale(1)',
+						opacity: '1'
+					},
+					'50%': {
+						transform: 'scale(1.3)',
+						opacity: '0.8'
+					},
+					'100%': {
+						transform: 'scale(1)',
+						opacity: '1'
+					}
 				}
 			},
 			animation: {
@@ -162,7 +176,8 @@ export default {
 				'slide-in-right': 'slide-in-right 0.6s ease-out forwards',
 				'slide-in-left': 'slide-in-left 0.6s ease-out forwards',
 				'scale-in': 'scale-in 0.6s ease-out forwards',
-				'blur-in': 'blur-in 0.6s ease-out forwards'
+				'blur-in': 'blur-in 0.6s ease-out forwards',
+				'pulse-dot': 'pulse-dot 2.5s infinite ease-in-out'
 			},
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
