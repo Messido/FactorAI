@@ -12,8 +12,8 @@ interface ServiceCardProps {
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ icon: Icon, title, description, slug }) => {
   return (
-    <div className="service-card bg-factor-black-light border border-gray-800 group hover:border-factor-red transition-all duration-300">
-      <div className="w-12 h-12 rounded-lg bg-factor-red flex items-center justify-center mb-5 transform transition-transform group-hover:scale-110">
+    <div className="service-card bg-factor-black-light border border-gray-800 group hover:border-[#ff1a3e] transition-all duration-300">
+      <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-[#e30613] to-[#ff3a5c] flex items-center justify-center mb-5 transform transition-transform group-hover:scale-110">
         <Icon size={24} className="text-white" />
       </div>
       
@@ -23,7 +23,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon: Icon, title, descriptio
       
       <Link 
         to={`/services/${slug}`}
-        className="inline-flex items-center text-factor-red hover:text-factor-red-light transition-colors font-medium group-hover:translate-x-1 transition-transform"
+        className="inline-flex items-center text-[#ff1a3e] hover:text-[#ff3a5c] transition-colors font-medium group-hover:translate-x-1 transition-transform"
       >
         Learn more
         <svg 
