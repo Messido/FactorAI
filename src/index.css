@@ -86,7 +86,7 @@
 
 @layer components {
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-factor-red to-factor-red-light;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#e30613] to-[#ff3a5c];
   }
 
   .transition-default {
@@ -106,11 +106,11 @@
   }
 
   .nav-link {
-    @apply relative px-2 py-1 text-foreground/80 hover:text-foreground transition-colors after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-factor-red after:transition-all after:duration-300 hover:after:w-full;
+    @apply relative px-2 py-1 text-foreground/80 hover:text-foreground transition-colors after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#ff1a3e] after:transition-all after:duration-300 hover:after:w-full;
   }
 
   .btn-primary {
-    @apply bg-factor-red hover:bg-factor-red-light text-white rounded-md px-5 py-2.5 font-medium transition-colors;
+    @apply bg-gradient-to-r from-[#e30613] to-[#ff3a5c] hover:from-[#ff1a3e] hover:to-[#ff3a5c] text-white rounded-md px-5 py-2.5 font-medium transition-colors;
   }
 
   .btn-secondary {
@@ -118,7 +118,7 @@
   }
 
   .btn-outline {
-    @apply border border-factor-red text-factor-red hover:bg-factor-red hover:text-white rounded-md px-5 py-2.5 font-medium transition-colors;
+    @apply border border-[#ff1a3e] text-[#ff1a3e] hover:bg-[#ff1a3e] hover:text-white rounded-md px-5 py-2.5 font-medium transition-colors;
   }
 }
 
@@ -180,10 +180,10 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(227, 6, 19, 0.5);
+  background: rgba(255, 26, 62, 0.5);
   border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(227, 6, 19, 0.8);
+  background: rgba(255, 26, 62, 0.8);
 }

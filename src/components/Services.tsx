@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { PenLine, Megaphone, BarChart2, Users, Video, Computer } from 'lucide-react';
 import ServiceCard from './ServiceCard';
@@ -49,7 +50,7 @@ const Services: React.FC = () => {
       <div className="container mx-auto px-6">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <span className="inline-block px-3 py-1 bg-factor-red/10 rounded-full text-factor-red text-sm font-medium mb-4">
+            <span className="inline-block px-3 py-1 bg-[#ff1a3e]/10 rounded-full text-[#ff1a3e] text-sm font-medium mb-4">
               Our Services
             </span>
             <AnimatedText

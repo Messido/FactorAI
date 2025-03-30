@@ -64,8 +64,8 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				factor: {
-					red: "#E30613",
-					"red-light": "#FF3A46",
+					red: "#ff1a3e",
+					"red-light": "#ff3a5c",
 					black: "#000000",
 					"black-light": "#121212",
 					"black-muted": "#222222",
