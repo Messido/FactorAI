@@ -57,14 +57,19 @@ const Footer: React.FC = () => {
                       </svg>
                     )}
                     {social === "linkedin" && (
-                      <svg
-                        width="18"
-                        height="18"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
+                      <a
+                        href="https://www.linkedin.com/company/factororg/posts/?feedView=all"
+                        target="_blank"
                       >
-                        <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"></path>
-                      </svg>
+                        <svg
+                          width="18"
+                          height="18"
+                          fill="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"></path>
+                        </svg>
+                      </a>
                     )}
                   </a>
                 )
@@ -121,7 +126,6 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-white font-bold mb-4">Contact</h3>
             <ul className="space-y-4">
-
               <li className="flex items-center">
                 <svg
                   width="20"
@@ -140,10 +144,10 @@ const Footer: React.FC = () => {
                   />
                 </svg>
                 <a
-                  href="tel:+1234567890"
+                  href="https://wa.link/calzr8"
                   className="text-gray-400 hover:text-factor-red transition-colors"
                 >
-                  +1 (234) 567-890
+                  +91 93106 39514
                 </a>
               </li>
               <li className="flex items-center">

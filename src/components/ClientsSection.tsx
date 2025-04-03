@@ -8,20 +8,23 @@ const ClientsSection: React.FC = () => {
     {
       quote:
         "Their creative approach to our social media campaigns drove engagement levels we hadn't seen before. The Factor team feels like an extension of our own marketing department.",
-      author: "David Chen",
-      company: "Global Finance",
+      author: "Lappy Sale",
+      company: "Lappy Sale",
+      link: "https://www.lappysale.com",
     },
     {
       quote:
-        "The website Factor built for us perfectly balances aesthetics and performance. We've seen conversion rates improve by 40% since the launch.",
-      author: "Michael Rodriguez",
-      company: "Modern Retail",
+        "Factor transformed our recruitment process with a sleek and highly functional website. Our candidate engagement has never been better!",
+      author: "Talent21",
+      company: "Talent21",
+      link: "https://talent21llc.com ",
     },
     {
       quote:
-        "The website Factor built for us perfectly balances aesthetics and performance. We've seen conversion rates improve by 40% since the launch.",
-      author: "Michael Rodriguez",
-      company: "Modern Retail",
+        "Working with Factor was a game-changer for our consulting firm. Their web solutions have significantly enhanced our client interactions and credibility",
+      author: "Multani Consulting ",
+      company: "Multani Consulting ",
+      link: "https://www.multaniconsulting.in",
     },
   ];
 
@@ -44,7 +47,16 @@ const ClientsSection: React.FC = () => {
               <TestimonialCard
                 quote={testimonial.quote}
                 author={testimonial.author}
-                company={testimonial.company}
+                company={
+                  <a
+                    href={testimonial.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-400 underline"
+                  >
+                    {testimonial.company}
+                  </a>
+                }
                 image={undefined}
               />
             </ScrollReveal>
