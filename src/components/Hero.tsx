@@ -52,7 +52,7 @@ const Hero: React.FC = () => {
             Factor
             <span 
               ref={dotRef} 
-              className="text-[#e30613] inline-block animate-pulse-dynamic"
+              className="text-[#e30613] inline-block animate-burst-dot"
               style={{transformOrigin: 'center'}}
             >.</span>
           </div>

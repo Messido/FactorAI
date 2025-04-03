@@ -187,6 +187,102 @@ export default {
 						transform: 'scale(1)',
 						filter: 'blur(0px)'
 					}
+				},
+				'burst-dot': {
+					'0%': {
+						transform: 'scale(1)',
+						filter: 'blur(0px)',
+						textShadow: 'none'
+					},
+					'15%': {
+						transform: 'scale(1.2)',
+						filter: 'blur(0px)',
+						textShadow: 
+							'0 0 5px #e30613, ' +
+							'0 15px 5px #e30613, ' +
+							'15px 0 5px #e30613, ' +
+							'0 -15px 5px #e30613, ' +
+							'-15px 0 5px #e30613, ' +
+							'10px 10px 5px #e30613, ' +
+							'-10px 10px 5px #e30613, ' +
+							'10px -10px 5px #e30613, ' +
+							'-10px -10px 5px #e30613'
+					},
+					'30%': {
+						transform: 'scale(1.4) rotate(5deg)',
+						filter: 'blur(0.3px)',
+						textShadow: 
+							'0 0 8px #e30613, ' +
+							'0 20px 8px #e30613, ' +
+							'20px 0 8px #e30613, ' +
+							'0 -20px 8px #e30613, ' +
+							'-20px 0 8px #e30613, ' +
+							'15px 15px 8px #e30613, ' +
+							'-15px 15px 8px #e30613, ' +
+							'15px -15px 8px #e30613, ' +
+							'-15px -15px 8px #e30613'
+					},
+					'45%': {
+						transform: 'scale(1.3) rotate(-3deg)',
+						filter: 'blur(0.2px)',
+						textShadow: 
+							'0 0 6px #e30613, ' +
+							'0 18px 6px #e30613, ' +
+							'18px 0 6px #e30613, ' +
+							'0 -18px 6px #e30613, ' +
+							'-18px 0 6px #e30613, ' +
+							'12px 12px 6px #e30613, ' +
+							'-12px 12px 6px #e30613, ' +
+							'12px -12px 6px #e30613, ' +
+							'-12px -12px 6px #e30613'
+					},
+					'60%': {
+						transform: 'scale(1.5) rotate(3deg)',
+						filter: 'blur(0.3px)',
+						textShadow: 
+							'0 0 8px #e30613, ' +
+							'0 22px 8px #e30613, ' +
+							'22px 0 8px #e30613, ' +
+							'0 -22px 8px #e30613, ' +
+							'-22px 0 8px #e30613, ' +
+							'16px 16px 8px #e30613, ' +
+							'-16px 16px 8px #e30613, ' +
+							'16px -16px 8px #e30613, ' +
+							'-16px -16px 8px #e30613'
+					},
+					'75%': {
+						transform: 'scale(1.2) rotate(-2deg)',
+						filter: 'blur(0.2px)',
+						textShadow: 
+							'0 0 7px #e30613, ' +
+							'0 16px 7px #e30613, ' +
+							'16px 0 7px #e30613, ' +
+							'0 -16px 7px #e30613, ' +
+							'-16px 0 7px #e30613, ' +
+							'12px 12px 7px #e30613, ' +
+							'-12px 12px 7px #e30613, ' +
+							'12px -12px 7px #e30613, ' +
+							'-12px -12px 7px #e30613'
+					},
+					'90%': {
+						transform: 'scale(1.1)',
+						filter: 'blur(0.1px)',
+						textShadow: 
+							'0 0 4px #e30613, ' +
+							'0 8px 4px #e30613, ' +
+							'8px 0 4px #e30613, ' +
+							'0 -8px 4px #e30613, ' +
+							'-8px 0 4px #e30613, ' +
+							'6px 6px 4px #e30613, ' +
+							'-6px 6px 4px #e30613, ' +
+							'6px -6px 4px #e30613, ' +
+							'-6px -6px 4px #e30613'
+					},
+					'100%': {
+						transform: 'scale(1)',
+						filter: 'blur(0px)',
+						textShadow: 'none'
+					}
 				}
 			},
 			animation: {
@@ -199,7 +295,8 @@ export default {
 				'scale-in': 'scale-in 0.6s ease-out forwards',
 				'blur-in': 'blur-in 0.6s ease-out forwards',
 				'pulse-dot': 'pulse-dot 2.5s infinite ease-in-out',
-				'pulse-dynamic': 'pulse-dynamic 3s infinite ease-in-out'
+				'pulse-dynamic': 'pulse-dynamic 3s infinite ease-in-out',
+				'burst-dot': 'burst-dot 4s infinite ease-in-out'
 			},
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
