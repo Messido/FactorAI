@@ -106,7 +106,7 @@ const Footer: React.FC = () => {
               {[
                 "About Us",
                 "Our Work",
-                "Team",
+                "Process",
                 "Careers",
                 "Contact",
                 "Blog",
