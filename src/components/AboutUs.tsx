@@ -42,11 +42,9 @@ const AboutUs: React.FC = () => {
                 </span>
               </div>
 
-              <TypingAnimation className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                We Empower Brands to Thrive Digitally
-              </TypingAnimation>
 
-              <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-10 animate-fade-in animate-delay-500">
+
+              <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-10 animate-fade-in animate-delay-500 pt-10">
                 At Factor, we’re passionate about helping businesses succeed
                 online with innovative digital solutions and creative strategies
                 tailored to their goals. We transform your digital presence into
