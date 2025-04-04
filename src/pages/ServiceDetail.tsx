@@ -500,9 +500,12 @@ const ServiceDetail: React.FC = () => {
                       Our {service.title} services are designed to deliver
                       measurable results and long-term value for your business.
                     </p>
-                    <a href="#contact" className="btn-primary">
+                    <Link
+                      to="/#contact"
+                      className="btn-primary px-8 py-3 inline-block"
+                    >
                       Get Started
-                    </a>
+                    </Link>
                   </div>
 
                   <div>
@@ -582,12 +585,12 @@ const ServiceDetail: React.FC = () => {
                 {service.title.toLowerCase()} services can help you achieve your
                 business goals.
               </p>
-              <a
-                href="#contact"
-                className="btn-primary px-8 py-3 text-lg inline-block"
+              <Link
+                to="/#contact"
+                className="btn-primary px-8 py-3 inline-block"
               >
-                Get in Touch
-              </a>
+                Get In Touch
+              </Link>
             </div>
           </div>
         </section>
