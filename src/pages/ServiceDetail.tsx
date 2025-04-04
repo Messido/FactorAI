@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import {
   PenLine,
@@ -362,6 +362,15 @@ const ServiceDetail: React.FC = () => {
   }
 
   const ServiceIcon = service.icon;
+
+  useEffect(() => {
+    // window.scrollTo(0, 0);
+    window.scrollTo({
+      top: 100,
+      left: 100,
+      behavior: "smooth",
+    });
+  }, [location]);
 
   return (
     <>

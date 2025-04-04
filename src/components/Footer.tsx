@@ -1,27 +1,36 @@
 import React from "react";
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import { Link, useNavigate } from "react-router-dom";
+
 const Footer: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleNavClick = (path: string, section?: string) => {
+    const targetPath = section ? `${path}#${section}` : path;
+    navigate(targetPath);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <footer className="bg-factor-black py-12 border-t border-gray-800">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="md:col-span-1">
-            <a
-              href="#"
+            <Link
+              to="/"
               className="text-2xl font-display font-bold text-white flex items-center mb-4"
             >
               <span className="text-factor-red">Factor</span>
               <span className="text-white">.</span>
-            </a>
+            </Link>
             <p className="text-gray-400 mb-6">
               A full-service digital agency helping brands thrive in an
               increasingly complex landscape.
             </p>
-
             <div className="flex space-x-4">
               <a
                 href="https://www.linkedin.com/company/factororg/posts/?feedView=all"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-factor-black-light border border-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-factor-red transition-colors"
               >
                 <svg
@@ -35,7 +44,6 @@ const Footer: React.FC = () => {
               </a>
             </div>
           </div>
-
           <div>
             <h3 className="text-white font-bold mb-4">Services</h3>
             <ul className="space-y-3">
@@ -48,67 +56,53 @@ const Footer: React.FC = () => {
                 "Web Development",
               ].map((service) => (
                 <li key={service}>
-                  <a
-                    href="#services"
+                  <button
+                    onClick={() =>
+                      navigate(
+                        `/services/${service.toLowerCase().replace(/ /g, "-")}`
+                      )
+                    }
                     className="text-gray-400 hover:text-factor-red transition-colors"
                   >
                     {service}
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>
           </div>
-
           <div>
             <h3 className="text-white font-bold mb-4">Company</h3>
             <ul className="space-y-3">
               <li>
                 <Link
-                  to="/aboutus" 
+                  to="/aboutus"
                   className="text-gray-400 hover:text-factor-red transition-colors"
                 >
                   About Us
                 </Link>
               </li>
               <li>
-                <a
-                  href="#work"
+                <button
+                  onClick={() => handleNavClick("/", "work")}
                   className="text-gray-400 hover:text-factor-red transition-colors"
                 >
                   Our Work
-                </a>
+                </button>
               </li>
               <li>
-                <a
-                  href="#process"
+                <button
+                  onClick={() => handleNavClick("/", "process")}
                   className="text-gray-400 hover:text-factor-red transition-colors"
                 >
                   Process
-                </a>
+                </button>
               </li>
             </ul>
           </div>
-
           <div>
             <h3 className="text-white font-bold mb-4">Contact</h3>
             <ul className="space-y-4">
               <li className="flex items-center">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="text-factor-red mr-3"
-                >
-                  <path
-                    d="M3 5C3 3.89543 3.89543 3 5 3H8.27924C8.70967 3 9.09181 3.27543 9.22792 3.68377L10.7257 8.17721C10.8831 8.64932 10.6694 9.16531 10.2243 9.38787L7.96701 10.5165C9.06925 12.9612 11.0388 14.9308 13.4835 16.033L14.6121 13.7757C14.8347 13.3306 15.3507 13.1169 15.8228 13.2743L20.3162 14.7721C20.7246 14.9082 21 15.2903 21 15.7208V19C21 20.1046 20.1046 21 19 21H18C9.71573 21 3 14.2843 3 6V5Z"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
                 <a
                   href="https://wa.link/calzr8"
                   className="text-gray-400 hover:text-factor-red transition-colors"
@@ -117,22 +111,6 @@ const Footer: React.FC = () => {
                 </a>
               </li>
               <li className="flex items-center">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="text-factor-red mr-3"
-                >
-                  <path
-                    d="M3 8L10.8906 13.2604C11.5624 13.7083 12.4376 13.7083 13.1094 13.2604L21 8M5 19H19C20.1046 19 21 18.1046 21 17V7C21 5.89543 20.1046 5 19 5H5C3.89543 5 3 5.89543 3 7V17C3 18.1046 3.89543 19 5 19Z"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
                 <a
                   href="mailto:official.thefactor@gmail.com"
                   className="text-gray-400 hover:text-factor-red transition-colors"
@@ -143,31 +121,51 @@ const Footer: React.FC = () => {
             </ul>
           </div>
         </div>
-
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-500 text-sm mb-4 md:mb-0">
               © {new Date().getFullYear()} Factor. All rights reserved.
             </p>
+
             <div className="flex space-x-6">
-              <a
-                href="#"
+              <Link
+                to="/privacy-policy"
                 className="text-gray-500 hover:text-factor-red text-sm transition-colors"
               >
                 Privacy Policy
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                to="/terms-of-service"
                 className="text-gray-500 hover:text-factor-red text-sm transition-colors"
               >
                 Terms of Service
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                to="/sitemap"
                 className="text-gray-500 hover:text-factor-red text-sm transition-colors"
               >
                 Sitemap
-              </a>
+              </Link>
+              <p className="text-gray-500 text-sm mb-4 md:mb-0">
+                Made with 💗 by{"  "}
+                <a
+                  href="https://www.linkedin.com/in/siddhant-jagati-b156b8203/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-blue-500 hover:underline"
+                >
+                  Siddhant
+                </a>
+                {"  "}&{"  "}
+                <a
+                  href="https://www.linkedin.com/in/karan-mishra-4374762a0/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-blue-500 hover:underline"
+                >
+                  Karan
+                </a>
+              </p>
             </div>
           </div>
         </div>

@@ -26,6 +26,7 @@ const AboutUs: React.FC = () => {
     const handleNavClick = (path: string, section?: string) => {
       const targetPath = section ? `${path}#${section}` : path;
       navigate(targetPath);
+                    
 
     };
 
@@ -211,10 +212,7 @@ const AboutUs: React.FC = () => {
         <section className="py-20 bg-gradient-to-b from-factor-black-light to-factor-black">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
-              <TypingAnimation
-                className="text-3xl md:text-4xl font-bold text-white mb-6"
-                text="Let’s Shape Your Digital Future Together"
-              />
+
               <p className="text-lg text-gray-300 mb-8">
                 Ready to elevate your brand? Contact us today to discover how
                 Factor can help you achieve your goals.
