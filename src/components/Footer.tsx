@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 const Footer: React.FC = () => {
   return (
     <footer className="bg-factor-black py-12 border-t border-gray-800">
@@ -62,22 +62,30 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-white font-bold mb-4">Company</h3>
             <ul className="space-y-3">
-              {[
-                "About Us",
-                "Our Work",
-                "Process",
-                "About Us",
-                "Contact",
-              ].map((item) => (
-                <li key={item}>
-                  <a
-                    href="#"
-                    className="text-gray-400 hover:text-factor-red transition-colors"
-                  >
-                    {item}
-                  </a>
-                </li>
-              ))}
+              <li>
+                <Link
+                  to="/aboutus" 
+                  className="text-gray-400 hover:text-factor-red transition-colors"
+                >
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <a
+                  href="#work"
+                  className="text-gray-400 hover:text-factor-red transition-colors"
+                >
+                  Our Work
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#process"
+                  className="text-gray-400 hover:text-factor-red transition-colors"
+                >
+                  Process
+                </a>
+              </li>
             </ul>
           </div>
 

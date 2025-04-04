@@ -2,6 +2,8 @@ import React from "react";
 import { TypingAnimation } from "../components/magicui/typing-animation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import {
   Users,
   Target,
@@ -14,6 +16,9 @@ import {
 } from "lucide-react";
 
 const AboutUs: React.FC = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
   return (
     <>
       <Navbar />
