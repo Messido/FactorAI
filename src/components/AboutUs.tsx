@@ -3,7 +3,7 @@ import { TypingAnimation } from "../components/magicui/typing-animation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import {
   Users,
   Target,
@@ -19,6 +19,16 @@ const AboutUs: React.FC = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
+
+  const navigate = useNavigate();
+
+
+    const handleNavClick = (path: string, section?: string) => {
+      const targetPath = section ? `${path}#${section}` : path;
+      navigate(targetPath);
+
+    };
+
   return (
     <>
       <Navbar />
@@ -47,8 +57,6 @@ const AboutUs: React.FC = () => {
                 </span>
               </div>
 
-
-
               <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-10 animate-fade-in animate-delay-500 pt-10">
                 At Factor, we’re passionate about helping businesses succeed
                 online with innovative digital solutions and creative strategies
@@ -58,12 +66,12 @@ const AboutUs: React.FC = () => {
                 results.
               </p>
 
-              <a
-                href="#contact"
+              <button
+                onClick={() => handleNavClick("/", "contact")}
                 className="btn-primary px-8 py-3 text-lg animate-fade-in animate-delay-1000"
               >
                 Get to Know Us
-              </a>
+              </button>
             </div>
           </div>
         </section>
@@ -211,9 +219,12 @@ const AboutUs: React.FC = () => {
                 Ready to elevate your brand? Contact us today to discover how
                 Factor can help you achieve your goals.
               </p>
-              <a href="#contact" className="btn-primary px-8 py-3 text-lg">
-                Contact Us
-              </a>
+              <button
+                onClick={() => handleNavClick("/", "contact")}
+                className="btn-primary px-8 py-3 text-lg animate-fade-in animate-delay-1000"
+              >
+                Get to Know Us
+              </button>
             </div>
           </div>
         </section>
