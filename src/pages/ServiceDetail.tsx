@@ -394,12 +394,12 @@ const ServiceDetail: React.FC = () => {
                   {service.description}
                 </p>
 
-                <a
-                  href="#contact"
+                <Link
+                  to="/#contact"
                   className="btn-primary px-8 py-3 inline-block"
                 >
                   Get Started
-                </a>
+                </Link>
               </div>
 
               <div className="lg:w-1/2 flex justify-center">

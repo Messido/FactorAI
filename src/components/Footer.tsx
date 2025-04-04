@@ -107,9 +107,8 @@ const Footer: React.FC = () => {
                 "About Us",
                 "Our Work",
                 "Process",
-                "Careers",
+                "About Us",
                 "Contact",
-                "Blog",
               ].map((item) => (
                 <li key={item}>
                   <a

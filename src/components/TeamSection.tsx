@@ -35,7 +35,7 @@ const HowWeWork = () => {
   ];
 
   return (
-    <section id="how-we-work" className="py-24 bg-factor-black">
+    <section id="process" className="py-24 bg-factor-black">
       <div className="container mx-auto px-6">
         <ScrollReveal>
           <div className="text-center mb-16">
